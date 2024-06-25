@@ -1,0 +1,46 @@
+on:
+  push:
+    branches-ignore:
+      - main
+  release:
+    types:
+      - created
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RegistryPackageUri: ghcr.io/jni75/e-nnov.fr
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set Docker Image Tag
+        run: |
+          if [ '${{ github.ref_type }}' == 'tag' ]
+          then
+            echo "docker_image_tag=${{ github.ref_name }}" >> $GITHUB_ENV
+          elif [ ${{ github.run_attempt }} -gt 1 ]
+          then
+            echo "docker_image_tag=build.${{ github.run_number }}.${{ github.run_attempt }}" >> $GITHUB_ENV
+          else
+            echo "docker_image_tag=build.${{ github.run_number }}" >> $GITHUB_ENV
+          fi
+
+      - name: Set Container Images Uri
+        run: |
+          echo "docker_webapp_uri=${{ env.RegistryPackageUri }}/webapp:${{ env.docker_image_tag }}" >> $GITHUB_ENV
+
+      - name: Build Webapp Docker image
+        run: "docker build -t ${{ env.docker_webapp_uri }} ."
+        working-directory: src/webapp
+
+      - name: Push Docker images
+        run: |
+          docker login ${{ env.RegistryPackageUri }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push ${{ env.docker_webapp_uri }}

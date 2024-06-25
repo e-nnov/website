@@ -8,5 +8,13 @@ const config: Config = {
   plugins: [
     require('daisyui')
   ],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
+  theme: {
+    colors: {
+      devblue: "#0078B7"
+    }
+  }
 };
 export default config;
