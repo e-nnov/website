@@ -3,15 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const ProfessionalExperience = () => {
     return (
-        <div className="m-4 flex flex-col gap-4 ">
+        <div className="m-4 print:m-0 flex flex-col gap-4 print:text-sm">
             <h2 className="border-b border-b-devblue text-lg font-medium">Exp&eacute;rience professionnelle</h2>
             {/* E-nnov */}
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                     <h3 className="font-medium">Consultant en d&eacute;veloppement logiciel, E-nnov (g&eacute;rant), Vern-sur-Seiche</h3>
-                    <span className="text-sm italic">Depuis Mars 2022</span>
+                    <span className="text-sm print:text-xs italic">Depuis Mars 2022</span>
                 </div>
-                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Conseil en architecture logicielle (TDD, DDD, micro-services, CQRS, Message Queue)</li>
                     <li>Mise en place de tableau de bord &agrave; partir de m&eacute;triques (outil Metabase)</li>
                     <li>Mise en place de chaine de d&eacute;veloppement compl&egrave;te avec d&eacute;ploiement automatique (CI/CD, Ansible, GitHub Actions, Azure Devops, Bitbucket, Docker &amp; Traefik)</li>
@@ -30,20 +30,20 @@ export const ProfessionalExperience = () => {
                         <h4 className="font-medium">Azenn</h4>
                         <span className="text-sm italic">Depuis Janvier 2024</span>
                     </div>
-                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                         <li>D&eacute;veloppement d&apos;un outil de nettoyage d&rsquo;une base de donn&eacute;es MySQL de 44 Go</li>
                         <li>D&eacute;veloppement d&rsquo;un int&eacute;grateur produit AS400 &gt; WordPress Woo Commerce</li>
                     </ul>
                 </div>
             </div>
             {/* Hexaom */}
-            <div className="flex flex-col gap-4 pl-4 break-after-page">
+            <div className="flex flex-col gap-4 pl-4">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                         <h4 className="font-medium">Hexaom</h4>
                         <span className="text-sm italic">Depuis Mai 2023</span>
                     </div>
-                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                         <li>
                             <span>D&eacute;veloppement d&apos;un outil d&apos;analyse du march&eacute; de la construction de maisons individuelles :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
@@ -64,8 +64,8 @@ export const ProfessionalExperience = () => {
                         <span className="text-sm italic">Depuis Mars 2023</span>
                     </div>
                     <h5>D&eacute;veloppeur FullStack .Net / React</h5>
-                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
-                        <li>
+                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
+                        <li className="break-after-page">
                             <span>Refonte compl&egrave;te du CI/CD des 70+ repositories GitHub :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Cr&eacute;ation d&apos;une API d&eacute;di&eacute;e au d&eacute;ploiement avec l&apos;utilisation d&apos;Ansible</li>
@@ -73,7 +73,7 @@ export const ProfessionalExperience = () => {
                                 <li>Mise en place de Git Flow pour la gestion des features, bugfix, hotfix, releases</li>
                             </ul>
                         </li>
-                        <li>
+                        <li className="print:pt-4">
                             <span>Cr&eacute;ation d&apos;un projet d&apos;analyse des centraux t&eacute;l&eacute;phoniques Asterisk :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Agr&eacute;gation de plus de 3000 appels quotidiens</li>
@@ -101,7 +101,7 @@ export const ProfessionalExperience = () => {
                         <span className="text-sm italic">Mars 2022 - Ao&ucirc;t 2023</span>
                     </div>
                     <h5>D&eacute;veloppeur FullStack .Net / React</h5>
-                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                    <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                         <li>
                             <span>Accompagnement du client dans le d&eacute;veloppement de fonctionnalit&eacute;s sur la plateforme :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
@@ -116,12 +116,12 @@ export const ProfessionalExperience = () => {
                 </div>
             </div>
             {/* Entities */}
-            <div className="flex flex-col gap-1 break-after-page">
+            <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                     <h3 className="font-medium">Directeur technique, Entities (co-fondateur), Rennes</h3>
                     <span className="text-sm italic">Avril 2010 - F&eacute;vrier 2022</span>
                 </div>
-                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Gestion de l&apos;infrastructure interne et de production : Hyper-V, Win/Linux, Docker, Azure</li>
                     <li>Lead technique logiciel et web</li>
                     <li>D&eacute;finition de la roadmap logicielle</li>
@@ -142,7 +142,7 @@ export const ProfessionalExperience = () => {
                     <h3 className="font-medium">Développeur logiciel, A Vendre à louer, Paris</h3>
                     <span className="text-sm italic">Mars 2005 - Mars 2010</span>
                 </div>
-                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8">
+                <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Participation &agrave; la d&eacute;finition de la roadmap logicielle</li>
                     <li>D&eacute;veloppement d&apos;un logiciel de gestion immobili&egrave;re : .Net, C#, WinForms &amp; WebForms, SOAP 1.2, T-SQL</li>
                     <li>D&eacute;veloppement des passerelles : reprise de donn&eacute;es, flux bidirectionnel</li>
