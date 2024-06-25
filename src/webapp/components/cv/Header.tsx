@@ -31,8 +31,8 @@ export const Header = () => {
                             </a>
                         </div>
                         <div className="tooltip tooltip-bottom before:whitespace-pre-line" data-tip={`Code source :
-                            https://github.com/Jni75/e-nnov.fr`}>
-                            <a href="https://github.com/Jni75/e-nnov.fr">
+                            https://github.com/e-nnov-fr/website`}>
+                            <a href="https://github.com/e-nnov-fr/website">
                                 <FontAwesomeIcon className="w-6 h-6 text-devblue" icon={faCode} />
                             </a>
                         </div>
