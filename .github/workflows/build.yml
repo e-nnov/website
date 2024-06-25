@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  RegistryPackageUri: ghcr.io/jni75/e-nnov.fr
+  RegistryPackageUri: ghcr.io/e-nnov-fr/website
 
 jobs:
   Build:
