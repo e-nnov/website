@@ -18,7 +18,7 @@ env:
 
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -47,3 +47,38 @@ jobs:
         run: |
           docker login ${{ env.RegistryPackageUri }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
           docker push ${{ env.docker_webapp_uri }}
+
+      - name: Prepare Artifact
+        run: |
+          mkdir -p ./build
+          cp docker-compose.yml ./build
+          cat > ./build/.env <<EOF
+          ---
+          BUILD_VERSION=${{ env.docker_image_tag }}
+          EOF
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: ./build/**
+
+  Deploy:
+    runs-on: self-hosted
+    needs: Build
+    environment: 
+      name: Production
+      url : "https://www.e-nnov.fr"
+    steps:
+
+      - name: Create Destination Folder
+        run: mkdir -p /home/debian/e-nnov.fr/website
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: /home/debian/e-nnov.fr/website
+
+      - name: Deploy
+        run: docker stack -c docker-compose.yml ennov-website
