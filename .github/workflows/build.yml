@@ -53,7 +53,6 @@ jobs:
           mkdir -p ./build
           cp docker-compose.yml ./build
           cat > ./build/.env <<EOF
-          ---
           BUILD_VERSION=${{ env.docker_image_tag }}
           EOF
 
