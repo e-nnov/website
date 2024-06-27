@@ -81,4 +81,7 @@ jobs:
           path: /home/debian/e-nnov.fr/website
 
       - name: Deploy
-        run: docker stack -c docker-compose.yml ennov-website
+        run: |
+          export $(grep -v '^#' .env | xargs)
+          docker stack deploy -c docker-compose.yml e-nnov-website
+        working-directory: /home/debian/e-nnov.fr/website
