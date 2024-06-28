@@ -14,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  RegistryPackageUri: ghcr.io/e-nnov-fr/website
+  RegistryPackageUri: ghcr.io/e-nnov/website
 
 jobs:
   Build:
