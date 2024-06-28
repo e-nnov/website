@@ -1,0 +1,83 @@
+on:
+  push:
+    branches-ignore:
+      - main
+  release:
+    types:
+      - created
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  packages: write
+
+env:
+  RegistryPackageUri: ghcr.io/e-nnov-fr/website
+
+jobs:
+  Build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set Docker Image Tag
+        run: |
+          if [ '${{ github.ref_type }}' == 'tag' ]
+          then
+            echo "docker_image_tag=${{ github.ref_name }}" >> $GITHUB_ENV
+          elif [ ${{ github.run_attempt }} -gt 1 ]
+          then
+            echo "docker_image_tag=build.${{ github.run_number }}.${{ github.run_attempt }}" >> $GITHUB_ENV
+          else
+            echo "docker_image_tag=build.${{ github.run_number }}" >> $GITHUB_ENV
+          fi
+
+      - name: Set Container Images Uri
+        run: |
+          echo "docker_webapp_uri=${{ env.RegistryPackageUri }}/webapp:${{ env.docker_image_tag }}" >> $GITHUB_ENV
+
+      - name: Build Webapp Docker image
+        run: "docker build -t ${{ env.docker_webapp_uri }} ."
+        working-directory: src/webapp
+
+      - name: Push Docker images
+        run: |
+          docker login ${{ env.RegistryPackageUri }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+          docker push ${{ env.docker_webapp_uri }}
+
+      - name: Prepare Artifact
+        run: |
+          mkdir -p ./build
+          cp docker-compose.yml ./build
+          cat > ./build/.env <<EOF
+          BUILD_VERSION=${{ env.docker_image_tag }}
+          EOF
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: ./build/**
+
+  Deploy:
+    runs-on: self-hosted
+    needs: Build
+    environment: 
+      name: Production
+      url : "https://www.e-nnov.fr"
+    steps:
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: artifact
+          path: /home/debian/e-nnov.fr/website
+
+      - name: Deploy
+        run: |
+          export $(grep -v '^#' .env | xargs)
+          docker stack deploy -c docker-compose.yml e-nnov-website
+        working-directory: /home/debian/e-nnov.fr/website

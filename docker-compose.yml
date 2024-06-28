@@ -1,0 +1,21 @@
+services:
+  webapp:
+    image: ghcr.io/e-nnov-fr/website/webapp:${BUILD_VERSION}
+    deploy:
+      labels:
+        traefik.enable: "true"
+        traefik.http.routers.ennov-website-webapp.rule: Host(`www.e-nnov.fr`)
+        traefik.http.routers.ennov-website-webapp.entrypoints: websecure
+        traefik.http.services.ennov-website-webapp.loadbalancer.server.port: 3000
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+    networks:
+      - private
+
+networks:
+  private:
+    name: stack_private
+    external: true
