@@ -1,6 +1,6 @@
 services:
   webapp:
-    image: ghcr.io/e-nnov-fr/website/webapp:${BUILD_VERSION}
+    image: ghcr.io/e-nnov/website/webapp:${BUILD_VERSION}
     deploy:
       labels:
         traefik.enable: "true"

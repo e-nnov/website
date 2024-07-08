@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 export const Header = () => {
     return (
-        <header className="flex gap-1 justify-between items-start">
+        <header className="flex gap-1 justify-between flex-wrap items-start">
             <div className="flex">
                 <div className="avatar">
                     <div className="w-12 h-12 rounded-full">
@@ -39,11 +39,20 @@ export const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="hidden sm:block stats stats-vertical shadow">
-                <div className="stat">
-                    <div className="stat-title">Exp&eacute;rience</div>
-                    <div className="stat-value"><YearExperience /><span className="text-xs">ans</span></div>
-                    <div className="stat-desc">{`dev. depuis 2005`}</div>
+            <div className="flex w-full md:w-auto justify-center items-center gap-1">
+                <div className="stats stats-vertical shadow">
+                    <div className="stat">
+                        <div className="stat-title">Agrément</div>
+                        <div className="stat-value">CII</div>
+                        <div className="stat-desc">{`jusqu'en 2026`}</div>
+                    </div>
+                </div>
+                <div className="stats stats-vertical shadow">
+                    <div className="stat">
+                        <div className="stat-title">Exp&eacute;rience</div>
+                        <div className="stat-value"><YearExperience /><span className="text-xs">ans</span></div>
+                        <div className="stat-desc">{`dev. depuis 2005`}</div>
+                    </div>
                 </div>
             </div>
         </header>
