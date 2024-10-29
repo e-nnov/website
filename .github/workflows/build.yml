@@ -58,6 +58,7 @@ jobs:
         with:
           name: artifact
           path: ./build/**
+          include-hidden-files: true          
 
   Deploy:
     runs-on: self-hosted

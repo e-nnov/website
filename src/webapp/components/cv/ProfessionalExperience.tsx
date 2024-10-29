@@ -13,10 +13,11 @@ export const ProfessionalExperience = () => {
                 </div>
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Conseil en architecture logicielle (TDD, DDD, micro-services, CQRS, Message Queue)</li>
-                    <li>Mise en place de tableau de bord &agrave; partir de m&eacute;triques (outil Metabase)</li>
+                    <li>Optimisation des performances des bases de données (SQL Profiling, MongoDB, MySQL)</li>
                     <li>Mise en place de chaine de d&eacute;veloppement compl&egrave;te avec d&eacute;ploiement automatique (CI/CD, Ansible, GitHub Actions, Azure Devops, Bitbucket, Docker &amp; Traefik)</li>
                     <li>Migration progressive de serveurs applicatifs vers des containers Docker</li>
                     <li>D&eacute;veloppement d&apos;applications web et de sites sur les technologies .net et React/Typescript (d&eacute;veloppeur fullstack)</li>
+                    <li>Mise en place de tableau de bord &agrave; partir de m&eacute;triques (Prometheus, Grafana, Metabase)</li>
                 </ul>
             </div>
             <span className="flex gap-2 items-center">
@@ -24,10 +25,13 @@ export const ProfessionalExperience = () => {
                 <span className="font-medium">Clients</span>
             </span>
             {/* Azenn */}
-            <div className="flex flex-col gap-4 pl-4">
+            <div className="flex flex-col gap-4 pl-4 break-after-page">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                        <h4 className="font-medium">Azenn</h4>
+                        <div className="flex flex-col gap-1">
+                            <h4 className="font-medium">Azenn</h4>
+                            <span className="text-xs">Distributeur r&eacute;seaux informatiques, t&eacute;l&eacute;coms, datacenters et s&eacute;curit&eacute;</span>
+                        </div>
                         <span className="text-sm italic">Depuis Janvier 2024</span>
                     </div>
                     <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
@@ -40,7 +44,10 @@ export const ProfessionalExperience = () => {
             <div className="flex flex-col gap-4 pl-4">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                        <h4 className="font-medium">Hexaom</h4>
+                        <div className="flex flex-col gap-1">
+                            <h4 className="font-medium">Hexaom</h4>
+                            <span className="text-xs">Constructeur de maisons, r&eacute;novation, promotion immobili&egrave;re, am&eacute;nagement foncier et services</span>
+                        </div>
                         <span className="text-sm italic">Depuis Mai 2023</span>
                     </div>
                     <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
@@ -60,12 +67,15 @@ export const ProfessionalExperience = () => {
             <div className="flex flex-col gap-4 pl-4">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                        <h4 className="font-medium">SantePlus</h4>
+                        <div className="flex flex-col gap-1">
+                            <h4 className="font-medium">SantePlus</h4>
+                            <span className="text-xs">Centres m&eacute;dicaux multidisciplinaire</span>
+                        </div>
                         <span className="text-sm italic">Depuis Mars 2023</span>
                     </div>
                     <h5>D&eacute;veloppeur FullStack .Net / React</h5>
                     <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
-                        <li className="break-after-page">
+                        <li>
                             <span>Refonte compl&egrave;te du CI/CD des 70+ repositories GitHub :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Cr&eacute;ation d&apos;une API d&eacute;di&eacute;e au d&eacute;ploiement avec l&apos;utilisation d&apos;Ansible</li>
@@ -94,10 +104,13 @@ export const ProfessionalExperience = () => {
                 </div>
             </div>
             {/* Cyberjobs.fr */}
-            <div className="flex flex-col gap-4 pl-4">
+            <div className="flex flex-col gap-4 pl-4 break-after-page">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                        <h4 className="font-medium">Cyberjobs.fr</h4>
+                        <div className="flex flex-col gap-1">
+                            <h4 className="font-medium">Cyberjobs.fr</h4>
+                            <span className="text-xs">Portail d&apos;offres d&apos;emploi sp&eacute;cialis&eacute; dans la cybers&eacute;curit&eacute;</span>
+                        </div>
                         <span className="text-sm italic">Mars 2022 - Ao&ucirc;t 2023</span>
                     </div>
                     <h5>D&eacute;veloppeur FullStack .Net / React</h5>
@@ -118,12 +131,16 @@ export const ProfessionalExperience = () => {
             {/* Entities */}
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                    <h3 className="font-medium">Directeur technique, Entities (co-fondateur), Rennes</h3>
+                    <div className="flex flex-col gap-1">
+                        <h3 className="font-medium">Directeur technique, Entities (co-fondateur), Rennes</h3>
+                        <span className="text-xs">Agence web sp&eacute;cialis&eacute;e dans les m&eacute;tiers de l&apos;immobilier</span>
+                    </div>
                     <span className="text-sm italic">Avril 2010 - F&eacute;vrier 2022</span>
                 </div>
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Gestion de l&apos;infrastructure interne et de production : Hyper-V, Win/Linux, Docker, Azure</li>
                     <li>Lead technique logiciel et web</li>
+                    <li>Administration & profiling du serveur SQL (Microsoft SQL Server)</li>
                     <li>D&eacute;finition de la roadmap logicielle</li>
                     <li>D&eacute;veloppement du logiciel EntitiesPro : .Net, C#, ASP NET WebForms &amp; MVC, API Rest, IdentityServer, T-SQL, Octopus, Azure Devops</li>
                     <li>Support et formation des utilisateurs</li>
@@ -139,7 +156,10 @@ export const ProfessionalExperience = () => {
             {/* AVAL */}
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                    <h3 className="font-medium">Développeur logiciel, A Vendre à louer, Paris</h3>
+                    <div className="flex flex-col gap-1">
+                        <h3 className="font-medium">Développeur logiciel, A Vendre à louer, Paris</h3>
+                        <span className="text-xs">Editeur portail immobilier &amp; logiciel</span>
+                    </div>
                     <span className="text-sm italic">Mars 2005 - Mars 2010</span>
                 </div>
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
