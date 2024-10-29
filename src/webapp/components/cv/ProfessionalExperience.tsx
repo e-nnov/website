@@ -13,7 +13,7 @@ export const ProfessionalExperience = () => {
                 </div>
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Conseil en architecture logicielle (TDD, DDD, micro-services, CQRS, Message Queue)</li>
-                    <li>Optimisation des performances des bases de données (SQL Profiling, MongoDB, MySQL)</li>
+                    <li>Optimisation des performances des bases de données (SQL Server, MongoDB, MySQL)</li>
                     <li>Mise en place de chaine de d&eacute;veloppement compl&egrave;te avec d&eacute;ploiement automatique (CI/CD, Ansible, GitHub Actions, Azure Devops, Bitbucket, Docker &amp; Traefik)</li>
                     <li>Migration progressive de serveurs applicatifs vers des containers Docker</li>
                     <li>D&eacute;veloppement d&apos;applications web et de sites sur les technologies .net et React/Typescript (d&eacute;veloppeur fullstack)</li>
@@ -140,7 +140,7 @@ export const ProfessionalExperience = () => {
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
                     <li>Gestion de l&apos;infrastructure interne et de production : Hyper-V, Win/Linux, Docker, Azure</li>
                     <li>Lead technique logiciel et web</li>
-                    <li>Administration & profiling du serveur SQL (Microsoft SQL Server)</li>
+                    <li>Administration & profiling du serveur SQL (Microsoft SQL Server, SQL Profiling)</li>
                     <li>D&eacute;finition de la roadmap logicielle</li>
                     <li>D&eacute;veloppement du logiciel EntitiesPro : .Net, C#, ASP NET WebForms &amp; MVC, API Rest, IdentityServer, T-SQL, Octopus, Azure Devops</li>
                     <li>Support et formation des utilisateurs</li>
