@@ -9,7 +9,7 @@ const items = [
     },
     {
         label:'Tests',
-        value:'TDD, NUnit, Moq, TestContainers'
+        value:'TDD, NUnit, XUnit, Moq, Bogus, TestContainers'
     },
     {
         label:'Base de données',
@@ -21,7 +21,7 @@ const items = [
     },
     {
         label:'Virtualisation/containeurs',
-        value:'Hyper-V, Vagrant, Virtual Box, Docker, Azure Kubernetes Service'
+        value:'Hyper-V, Vagrant, Virtual Box, Docker & Swarm, Azure Kubernetes Service'
     },
     {
         label:'Langue',

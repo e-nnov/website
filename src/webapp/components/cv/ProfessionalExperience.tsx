@@ -1,14 +1,17 @@
-import { faUserTie } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faCode, faUserTie } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const ProfessionalExperience = () => {
     return (
-        <div className="m-4 print:m-0 flex flex-col gap-4 print:text-sm">
+        <div className="m-4 print:mx-0 flex flex-col gap-4 print:text-sm">
             <h2 className="border-b border-b-devblue text-lg font-medium">Exp&eacute;rience professionnelle</h2>
             {/* E-nnov */}
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
-                    <h3 className="font-medium">Consultant en d&eacute;veloppement logiciel, E-nnov (g&eacute;rant), Vern-sur-Seiche</h3>
+                    <div className="flex items-center gap-1">
+                        <FontAwesomeIcon className="w-4 h-4 text-devblue" icon={faCode} />
+                        <h3 className="font-medium">Consultant en d&eacute;veloppement logiciel, E-nnov (g&eacute;rant), Vern-sur-Seiche (35)</h3>
+                    </div>
                     <span className="text-sm print:text-xs italic">Depuis Mars 2022</span>
                 </div>
                 <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
@@ -25,27 +28,33 @@ export const ProfessionalExperience = () => {
                 <span className="font-medium">Clients</span>
             </span>
             {/* Azenn */}
-            <div className="flex flex-col gap-4 pl-4 break-after-page">
+            <div className="flex flex-col gap-4 pl-4">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                         <div className="flex flex-col gap-1">
-                            <h4 className="font-medium">Azenn</h4>
+                            <div className="flex items-center gap-1">
+                                <FontAwesomeIcon className="w-2 h-2 text-devblue" icon={faChevronRight} />
+                                <h4 className="font-medium">Azenn</h4>
+                            </div>
                             <span className="text-xs">Distributeur r&eacute;seaux informatiques, t&eacute;l&eacute;coms, datacenters et s&eacute;curit&eacute;</span>
                         </div>
                         <span className="text-sm italic">Depuis Janvier 2024</span>
                     </div>
                     <ul className="list-disc marker:text-devblue pl-4 lg:pl-8 print:pl-8">
-                        <li>D&eacute;veloppement d&apos;un outil de nettoyage d&rsquo;une base de donn&eacute;es MySQL de 44 Go</li>
-                        <li>D&eacute;veloppement d&rsquo;un int&eacute;grateur produit AS400 &gt; WordPress Woo Commerce</li>
+                        <li>D&eacute;veloppement d&apos;un outil de nettoyage d&rsquo;une table MySQL de 44 Go</li>
+                        <li>D&eacute;veloppement d&rsquo;un int&eacute;grateur produit AS400 &gt; WordPress Woo Commerce via API Rest</li>
                     </ul>
                 </div>
             </div>
             {/* Hexaom */}
-            <div className="flex flex-col gap-4 pl-4">
+            <div className="flex flex-col gap-4 pl-4 break-after-page">
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                         <div className="flex flex-col gap-1">
-                            <h4 className="font-medium">Hexaom</h4>
+                            <div className="flex items-center gap-1">
+                                <FontAwesomeIcon className="w-2 h-2 text-devblue" icon={faChevronRight} />
+                                <h4 className="font-medium">Hexaom</h4>
+                            </div>
                             <span className="text-xs">Constructeur de maisons, r&eacute;novation, promotion immobili&egrave;re, am&eacute;nagement foncier et services</span>
                         </div>
                         <span className="text-sm italic">Depuis Mai 2023</span>
@@ -54,7 +63,7 @@ export const ProfessionalExperience = () => {
                         <li>
                             <span>D&eacute;veloppement d&apos;un outil d&apos;analyse du march&eacute; de la construction de maisons individuelles :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
-                                <li>Int&eacute;gration mensuelle de donn&eacute;es depuis data.gouv.fr</li>
+                                <li>Int&eacute;gration mensuelle de donn&eacute;es depuis data.gouv.fr dans une base MongoDB</li>
                                 <li>Cr&eacute;ation de tableaux de bord sur l&apos;outil Metabase</li>
                                 <li>Affichage des tableaux de bord dans Microsoft Teams</li>
                                 <li>H&eacute;bergement (VPS OVH)</li>
@@ -68,7 +77,10 @@ export const ProfessionalExperience = () => {
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                         <div className="flex flex-col gap-1">
-                            <h4 className="font-medium">SantePlus</h4>
+                            <div className="flex items-center gap-1">
+                                <FontAwesomeIcon className="w-2 h-2 text-devblue" icon={faChevronRight} />
+                                <h4 className="font-medium">SantePlus</h4>
+                            </div>
                             <span className="text-xs">Centres m&eacute;dicaux multidisciplinaire</span>
                         </div>
                         <span className="text-sm italic">Depuis Mars 2023</span>
@@ -100,6 +112,8 @@ export const ProfessionalExperience = () => {
                             </ul>
                         </li>
                         <li>Mise en place de l&apos;outil n8n d&apos;automatisation de flux</li>
+                        <li>Cr&eacute;ation du nouveau socle Patient avec synchro intelligente asynchrone avec l&apos;outil Galaxie</li>
+                        <li>Facturation automatique FSE à la détection de la carte vitale</li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +122,10 @@ export const ProfessionalExperience = () => {
                 <div className="flex flex-col">
                     <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                         <div className="flex flex-col gap-1">
-                            <h4 className="font-medium">Cyberjobs.fr</h4>
+                            <div className="flex items-center gap-1">
+                                <FontAwesomeIcon className="w-2 h-2 text-devblue" icon={faChevronRight} />
+                                <h4 className="font-medium">Cyberjobs.fr</h4>
+                            </div>
                             <span className="text-xs">Portail d&apos;offres d&apos;emploi sp&eacute;cialis&eacute; dans la cybers&eacute;curit&eacute;</span>
                         </div>
                         <span className="text-sm italic">Mars 2022 - Ao&ucirc;t 2023</span>
@@ -119,9 +136,10 @@ export const ProfessionalExperience = () => {
                             <span>Accompagnement du client dans le d&eacute;veloppement de fonctionnalit&eacute;s sur la plateforme :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Mise en place d&apos;une nouvelle architecture (Domain Driven Design)</li>
-                                <li>D&eacute;veloppement d&apos;une messagerie instantan&eacute;e</li>
+                                <li>D&eacute;veloppement d&apos;une messagerie instantan&eacute;e (de type LinkedIn)</li>
                                 <li>D&eacute;veloppement de tests d&apos;aptitudes</li>
                                 <li>Application des recommandations SEO</li>
+                                <li>Migration progressive vers NextJS</li>
                                 <li>Mise en place d&apos;une nouvelle stack Docker : Cluster MongoDB, MariaDB, Elk Stack, Prometheus/Grafana, Traefik</li>
                             </ul>
                         </li>
@@ -132,7 +150,10 @@ export const ProfessionalExperience = () => {
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                     <div className="flex flex-col gap-1">
-                        <h3 className="font-medium">Directeur technique, Entities (co-fondateur), Rennes</h3>
+                        <div className="flex items-center gap-1">
+                            <FontAwesomeIcon className="w-4 h-4 text-devblue" icon={faCode} />
+                            <h3 className="font-medium">Directeur technique, Entities (co-fondateur), Rennes (35)</h3>
+                        </div>
                         <span className="text-xs">Agence web sp&eacute;cialis&eacute;e dans les m&eacute;tiers de l&apos;immobilier</span>
                     </div>
                     <span className="text-sm italic">Avril 2010 - F&eacute;vrier 2022</span>
@@ -157,8 +178,11 @@ export const ProfessionalExperience = () => {
             <div className="flex flex-col gap-1">
                 <div className="flex flex-col lg:flex-row justify-between lg:items-center">
                     <div className="flex flex-col gap-1">
-                        <h3 className="font-medium">Développeur logiciel, A Vendre à louer, Paris</h3>
-                        <span className="text-xs">Editeur portail immobilier &amp; logiciel</span>
+                        <div className="flex items-center gap-1">
+                            <FontAwesomeIcon className="w-4 h-4 text-devblue" icon={faCode} />
+                            <h3 className="font-medium">Développeur logiciel, A Vendre à louer, Paris (75)</h3>
+                        </div>
+                        <span className="text-xs">Editeur portail immobilier &amp; logiciel transactionnel</span>
                     </div>
                     <span className="text-sm italic">Mars 2005 - Mars 2010</span>
                 </div>
@@ -167,7 +191,7 @@ export const ProfessionalExperience = () => {
                     <li>D&eacute;veloppement d&apos;un logiciel de gestion immobili&egrave;re : .Net, C#, WinForms &amp; WebForms, SOAP 1.2, T-SQL</li>
                     <li>D&eacute;veloppement des passerelles : reprise de donn&eacute;es, flux bidirectionnel</li>
                     <li>Participation au d&eacute;veloppement du BackOffice de la soci&eacute;t&eacute; : import, export, statistiques</li>
-                    <li>Administration des serveurs web et SGBD</li>
+                    <li>Administration des serveurs web et SGBD MSSQL</li>
                 </ul>
             </div>
         </div>
