@@ -95,25 +95,33 @@ export const ProfessionalExperience = () => {
                                 <li>Mise en place de Git Flow pour la gestion des features, bugfix, hotfix, releases</li>
                             </ul>
                         </li>
-                        <li className="print:pt-4">
+                        <li>
                             <span>Cr&eacute;ation d&apos;un projet d&apos;analyse des centraux t&eacute;l&eacute;phoniques Asterisk :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Agr&eacute;gation de plus de 3000 appels quotidiens</li>
                                 <li>D&eacute;tection des appels en absence</li>
                             </ul>
                         </li>
+                        <li>Mise en place de l&apos;outil n8n d&apos;automatisation de flux (avec le support de .net pour exécuter des scripts complexes)</li>
                         <li>
                             <span>Cr&eacute;ation d&apos;un projet de t&acirc;ches &agrave; effectuer :</span>
                             <ul className="list-[square] pl-4 lg:pl-8">
                                 <li>Appel en absence provenant des Asterisk avec cl&ocirc;ture automatique de la t&acirc;che en cas d&apos;appel
                                     r&eacute;ussi</li>
-                                <li>Demande de rappel provenant du site sante-plus.com (via n8n)</li>
-                                <li>Formulaire de contact provenant du site sante-plus.com (via n8n)</li>
+                                <li>Demande de rappel &amp; Formulaire de contact provenant du site sante-plus.com (via n8n)</li>
+                                <li>Onboarding des nouveaux collaborateurs</li>
+                                <li>Suivi des prises en charge dentaire (envoi mutuelle, relance, reste à charge patient)</li>
+                                <li>+ de nombreux autres cas d&apos;usage</li>
                             </ul>
                         </li>
-                        <li>Mise en place de l&apos;outil n8n d&apos;automatisation de flux</li>
-                        <li>Cr&eacute;ation du nouveau socle Patient avec synchro intelligente asynchrone avec l&apos;outil Galaxie</li>
-                        <li>Facturation automatique FSE à la détection de la carte vitale</li>
+                        <li>
+                            <span>Cr&eacute;ation du nouveau socle Patient :</span>
+                            <ul className="list-[square] pl-4 lg:pl-8">
+                                <li>Synchro intelligente asynchrone avec les outils tiers (Galaxie, Doctolib)</li>
+                                <li>Cr&eacute;ation automatique du patient &agrave; l&apos;insertion de la carte vitale</li>
+                                <li>Facturation automatique FSE &agrave; la d&eacute;tection de la carte vitale</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
